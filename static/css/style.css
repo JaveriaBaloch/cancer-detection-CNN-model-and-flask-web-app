@@ -1,0 +1,111 @@
+        #Contact_Me {
+    transform: translateY(100%);
+    transition: transform 0.5s ease-in-out;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: black;
+    padding: 3rem;
+    z-index: 10;
+}
+
+#Contact_Me.show {
+    transform: translateY(0);
+}
+
+#nav .nav-link {
+    cursor: pointer;
+}
+
+       #home{
+            padding:2rem;
+            padding-top:5rem;
+            min-height:100vh;
+            display:flex;
+            justify-content:center;
+            align-items:center;
+            background:linear-gradient(rgba(0, 0, 0, 0.3),rgba(0, 0, 0, 0.5)), url("../images/home.jpg") ;
+            background-repeat:no-repeat;
+            background-size:cover;
+           background-attachment: fixed; /* Makes the background image fixed during scrolling */
+
+       }
+        #detector{
+         padding:2rem;
+            padding-top:5rem;
+            min-height:100vh;
+            display:flex;
+            justify-content:center;
+            align-items:center;
+            background:linear-gradient(rgba(0, 0, 0, 0.3),rgba(0, 0, 0, 0.5)), url("../images/test.jpg");
+            background-repeat:no-repeat;
+            background-size:cover;
+           background-attachment: fixed; /* Makes the background image fixed during scrolling */
+
+        }
+       #nav{
+       padding-top:1rem;
+       padding-bottom:1rem;
+       position:fixed;
+       top:0;
+            background:rgba(0,0,0,0.5);
+            width:100%;
+
+       }
+       #nav .nav-link{
+       color:white;
+       }
+        .card-view{
+        padding:2rem 2.5rem;
+        border-radius:2.6rem;
+        box-shadow: 2px 2px 15px white;
+        background:rgba(0,0,0,0.6);
+        max-width:40rem;
+        }
+        .card-view p,.card-view h1{
+        color:white;
+        }
+        #upload-form{
+          display:flex;
+            justify-content:center;
+            align-items:center;
+            flex-direction:column;
+        }
+        .prediction-result{
+            color:white;
+
+        }
+
+        #image-result img{
+         width: 80%;                /* Set the width to 80% of the parent container */
+    object-fit: contain;       /* Scale the image to fit the container while maintaining its aspect ratio */
+    display: block;            /* Ensure the image behaves like a block element (no inline spacing) */
+    margin: 2rem auto;
+
+        }
+        .bg-black{
+        background:black;
+        padding:3rem;
+        }
+        .bg-black a{
+        text-decoration:none;
+        }
+        #close-btn {
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    z-index: 11;
+    background-color: #f8f9fa;
+    border: none;
+    padding: 0.5rem 1rem;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+#close-btn:hover {
+    background-color: #e2e6ea;
+}
+.logo{
+height: 4rem;
+}

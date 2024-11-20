@@ -1,0 +1,8 @@
+# Ignore dataset directory
+/dataset
+
+# Ignore .idea directory (used by JetBrains IDEs like PyCharm, IntelliJ, etc.)
+.idea/
+
+# Ignore venv directory (virtual environment)
+/venv/
