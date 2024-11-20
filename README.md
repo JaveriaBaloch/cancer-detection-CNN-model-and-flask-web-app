@@ -84,7 +84,7 @@ Ensure that the Model.h5 path is correctly specified in webApp.py. If the model 
 - Make sure 'Model.h5' path is correct in 'webApp.py'
 
 ## Usage
-1. Clone the repository: git clone <repository_url>
+1. Clone the repository: git clone [https://github.com/JaveriaBaloch/cancer-detection-CNN-model-and-flask-web-app.git](https://github.com/JaveriaBaloch/cancer-detection-CNN-model-and-flask-web-app.git)
 2. Install required dependencies: pip install -r requirements.txt
 3. Run the Flask app: python webApp.py
 4. Access the web interface in your browser at http://localhost:5000
