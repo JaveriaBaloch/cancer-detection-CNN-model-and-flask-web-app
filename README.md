@@ -78,6 +78,7 @@ jupyter notebook lung_cancer_detection.ipynb
 
 ### Step 3: Model Path
 Ensure that the Model.h5 path is correctly specified in webApp.py. If the model file is in a different directory, update the path accordingly.
+- download and import the dataset file form [https://1drv.ms/u/c/50f6c2d269b97793/EaXSp2P3LlBOpCR3g6c5xvUB85LXehRC1vLfXgG4vjnuxg?e=DPNu1k](https://1drv.ms/u/c/50f6c2d269b97793/EaXSp2P3LlBOpCR3g6c5xvUB85LXehRC1vLfXgG4vjnuxg?e=DPNu1k) and unzip and bring it under this project
 - Install required dependencies: `pip install -r requirements.txt`
 - Run the Flask app: `python webApp.py`
 - Access the web interface in your browser at `http://localhost:5000`
