@@ -22,7 +22,7 @@ This project aims to detect lung cancer using a Convolutional Neural Network (CN
 1. Intstall virtual environment:
    ```bash
    python3.7 -m pip install virtualenv
-```
+   ```
 
 2. Create a virtual environment for Flask (Python 3.7)
 If you're using virtualenv, create a virtual environment with Python 3.7:
