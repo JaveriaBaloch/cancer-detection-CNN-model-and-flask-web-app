@@ -56,15 +56,7 @@ On Windows:
 ```bash 
 venv_jupyter\Scripts\activate
 ```
-On macOS/Linux:
-```bash
-source venv_jupyter/bin/activate
-```
 
-Install the necessary Jupyter dependencies:
-```bash
-pip install jupyter
-```
 
 ###  Step 2: Run the Project:
 1. Activate the Flask virtual environment (venv_flask), then run the Flask app:
