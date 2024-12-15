@@ -125,3 +125,10 @@ This project uses a Convolutional Neural Network (CNN) to detect lung cancer, wi
 
 ## Repository
 GitHub: [cancer-detection-CNN-model-and-flask-web-app](https://github.com/JaveriaBaloch/cancer-detection-CNN-model-and-flask-web-app)
+
+---
+
+## License
+
+This project is licensed under the MIT License.  
+You are free to use, modify, and distribute this software in compliance with the license terms. See the [LICENSE](https://opensource.org/licenses/MIT) file for details.
