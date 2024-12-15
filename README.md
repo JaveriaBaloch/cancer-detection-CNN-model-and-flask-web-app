@@ -47,7 +47,7 @@ source venv_flask/bin/activate
 ```bash
 pip install -r requirements.txt
 ```
-5. Create a virtual environment for Jupyter (Python 3.10)
+5. Open a separate terminal and create a virtual environment for Jupyter (Python 3.10)
 ```bash
 python3.10 -m venv venv_jupyter
 ```
@@ -59,13 +59,13 @@ venv_jupyter\Scripts\activate
 
 
 ###  Step 2: Run the Project:
-1. Activate the Flask virtual environment (venv_flask), then run the Flask app:
+1. Come to the first terminal and activate the Flask virtual environment (venv_flask), then run the Flask app:
 ```bash
 python webApp.py
 ```
 The app will be accessible at http://localhost:5000 in your browser.
 
-2. Run the Jupyter Notebook for training the model
+2. Come to the sencode terminal and run the Jupyter Notebook for training the model
 
 Activate the Jupyter virtual environment (venv_jupyter), then start Jupyter Notebook:
 ```bash 
