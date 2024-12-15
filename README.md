@@ -19,8 +19,12 @@ This project aims to detect lung cancer using a Convolutional Neural Network (CN
 ## Setup Instructions
 
 ### Step 1: Set up Virtual Environments
+1. Intstall virtual environment:
+   ```bash
+   python3.7 -m pip install virtualenv
+```
 
-1. Create a virtual environment for Flask (Python 3.7)
+2. Create a virtual environment for Flask (Python 3.7)
 If you're using virtualenv, create a virtual environment with Python 3.7:
 ```bash 
 virtualenv -p python3.7 venv_flask
@@ -30,7 +34,7 @@ If you're using venv (Python 3.7 is assumed):
 ```bash
 python3.7 -m venv venv_flask
 ```
-2. Activate the virtual environment for Flask:
+3. Activate the virtual environment for Flask:
 On Windows:
 ```bash
 venv_flask\Scripts\activate
@@ -39,15 +43,15 @@ On macOS/Linux:
 ```bash
 source venv_flask/bin/activate
 ```
-3. Install required dependencies for Flask
+4. Install required dependencies for Flask
 ```bash
 pip install -r requirements.txt
 ```
-4. Create a virtual environment for Jupyter (Python 3.10)
+5. Create a virtual environment for Jupyter (Python 3.10)
 ```bash
 python3.10 -m venv venv_jupyter
 ```
-5. Activate the virtual environment for Jupyter
+6. Activate the virtual environment for Jupyter
 On Windows:
 ```bash 
 venv_jupyter\Scripts\activate
