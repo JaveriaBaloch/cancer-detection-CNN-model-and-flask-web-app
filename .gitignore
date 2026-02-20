@@ -6,3 +6,6 @@
 
 # Ignore venv directory (virtual environment)
 /venv/
+
+/venv_flask/
+/venv_jupyter/

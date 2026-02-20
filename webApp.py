@@ -24,19 +24,6 @@ def preprocess_image(file_path):
     img = np.expand_dims(img, axis=0)  # Add batch dimension
     return img
 
-# Define the CNN model architecture for training (if needed)
-def create_cnn_model():
-    cnn = tf.keras.models.Sequential([
-        tf.keras.layers.Conv2D(32, (3, 3), activation='relu', input_shape=(64, 64, 3)),
-        tf.keras.layers.MaxPooling2D(2, 2),
-        tf.keras.layers.Conv2D(32, (3, 3), activation='relu'),
-        tf.keras.layers.MaxPooling2D(2, 2),
-        tf.keras.layers.Flatten(),
-        tf.keras.layers.Dense(128, activation='relu'),
-        tf.keras.layers.Dense(1, activation='sigmoid')
-    ])
-    cnn.compile(optimizer='adam', loss='binary_crossentropy', metrics=['accuracy'])
-    return cnn
 
 # Route: Home
 @app.route('/')
@@ -72,41 +59,7 @@ def predict():
     except Exception as e:
         return jsonify({'error': str(e)})
 
-# Training example: Uncomment and adjust paths for training
-def train_cnn():
-    train_datagen = ImageDataGenerator(
-        rescale=1./255,
-        shear_range=0.2,
-        zoom_range=0.2,
-        horizontal_flip=True
-    )
-
-    test_datagen = ImageDataGenerator(rescale=1./255)
-
-    training_set = train_datagen.flow_from_directory(
-        './dataset/training_set/',
-        target_size=(64, 64),
-        batch_size=32,
-        class_mode='binary'
-    )
-
-    test_set = test_datagen.flow_from_directory(
-        './dataset/test_set/',
-        target_size=(64, 64),
-        batch_size=32,
-        class_mode='binary'
-    )
-
-    # Create and train the CNN
-    cnn = create_cnn_model()
-    cnn.fit(
-        training_set,
-        validation_data=test_set,
-        epochs=30
-    )
-    cnn.save('./model.h5')  # Save the trained model for future use
-
 if __name__ == '__main__':
     # Uncomment the following line to train the model
     # train_cnn()
-    app.run(debug=True)
+    app.run(debug=True, host='127.0.0.1', port=5001)

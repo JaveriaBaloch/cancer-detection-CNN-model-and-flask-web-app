@@ -4,8 +4,11 @@
 This project uses a Convolutional Neural Network (CNN) to detect lung cancer, with a Flask-based backend for predictions and a Jupyter notebook for model training. A web interface (`index.html`) enables users to upload CT scan images and receive predictions.
 
 ## Model
-- The model is trained using the notebook `lung_cancer_detection.ipynb`.
+- The model is trained using the notebook `lungs_cancer_detection.ipynb`.
 - It uses a CNN architecture to classify CT scan images into two categories: **Normal** and **Cancerous**.
+
+## ML Purpose
+This machine learning pipeline learns visual patterns in lung CT images to assist with **binary classification** (Normal vs Cancerous). The goal is to provide a fast, reproducible screening signal by mapping image pixels to a cancer probability, which is then surfaced in the Flask web app for user-uploaded scans.
 
 ## Flask App
 - The Flask app (`webApp.py`) serves as the backend for making predictions.
@@ -22,19 +25,22 @@ This project uses a Convolutional Neural Network (CNN) to detect lung cancer, wi
 
 ### Step 1: Set Up Virtual Environments
 
-1. **Install virtual environment**:  
+> **Important:** Use **two different Python versions**:
+> - Flask app: **Python 3.7**
+> - Jupyter notebook: **Python 3.10**
+
+1. **Install Python 3.7 and 3.10 (macOS, via pyenv)**:  
    ```bash
-   python3.7 -m pip install virtualenv
+   brew install pyenv
+   pyenv install 3.7.17
+   pyenv install 3.10.13
+   
    ```
 
-2. **Create a virtual environment for Flask (Python 3.7)**  
-   If you're using virtualenv:  
+2. **Create a virtual environment for Flask (Python 3.7)**:  
    ```bash
-   virtualenv -p python3.7 venv_flask
-   ```  
-   If you're using venv:  
-   ```bash
-   python3.7 -m venv venv_flask
+   pyenv local 3.7.17
+   python -m venv venv_flask
    ```
 
 3. **Activate the virtual environment for Flask**:  
@@ -55,7 +61,8 @@ This project uses a Convolutional Neural Network (CNN) to detect lung cancer, wi
 5. **Create a virtual environment for Jupyter (Python 3.10)**:  
    Open a separate terminal and run:  
    ```bash
-   python3.10 -m venv venv_jupyter
+   pyenv local 3.10.13
+   python -m venv venv_jupyter
    ```
 
 6. **Activate the virtual environment for Jupyter**:  
@@ -66,6 +73,7 @@ This project uses a Convolutional Neural Network (CNN) to detect lung cancer, wi
    On macOS/Linux:  
    ```bash
    source venv_jupyter/bin/activate
+   pip install jupyter
    ```
 
 ---
@@ -77,12 +85,13 @@ This project uses a Convolutional Neural Network (CNN) to detect lung cancer, wi
    ```bash
    python webApp.py
    ```  
-   The app will be accessible at [http://localhost:5000](http://localhost:5000).
+   The app will be accessible at [http://localhost:5001](http://localhost:5001).
 
 2. **Run the Jupyter Notebook**:  
+
    In the second terminal, activate the Jupyter virtual environment (`venv_jupyter`) and start Jupyter Notebook:  
    ```bash
-   jupyter notebook lung_cancer_detection.ipynb
+   jupyter notebook lungs_cancer_detection.ipynb
    ```
 
 ---
@@ -117,7 +126,7 @@ This project uses a Convolutional Neural Network (CNN) to detect lung cancer, wi
    python webApp.py
    ```
 
-4. Access the web interface in your browser at [http://localhost:5000](http://localhost:5000).
+4. Access the web interface in your browser at [http://127.0.0.1:5001](http://127.0.0.1:5001).
 
 5. Ensure that the `Model.h5` path is correct in `webApp.py`.
 
