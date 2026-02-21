@@ -10,7 +10,7 @@ import tensorflow as tf
 app = Flask(__name__)
 
 # Load the trained CNN model
-cnn_model = load_model('./model1.h5')  # Update with the path to your trained model
+cnn_model = load_model('./model.h5')  # Update with the path to your trained model
 
 # Define the folder for uploaded images
 UPLOAD_FOLDER = 'static/uploads'

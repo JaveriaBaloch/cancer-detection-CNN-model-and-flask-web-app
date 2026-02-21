@@ -9,3 +9,5 @@
 
 /venv_flask/
 /venv_jupyter/
+.ipynb_checkpoints
+
