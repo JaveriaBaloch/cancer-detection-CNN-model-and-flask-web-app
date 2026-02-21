@@ -98,7 +98,7 @@ This machine learning pipeline learns visual patterns in lung CT images to assis
 
 ### Step 3: Model Path
 
-- Ensure that the `Model.h5` path is correctly specified in `webApp.py`.  
+- Ensure that the `model.h5` path is correctly specified in `webApp.py`.  
 - If the model file is in a different directory, update the path accordingly.
 
 ---
@@ -128,7 +128,7 @@ This machine learning pipeline learns visual patterns in lung CT images to assis
 
 4. Access the web interface in your browser at [http://127.0.0.1:5001](http://127.0.0.1:5001).
 
-5. Ensure that the `Model.h5` path is correct in `webApp.py`.
+5. Ensure that the `model.h5` path is correct in `webApp.py`.
 
 ---
 
